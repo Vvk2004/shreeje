@@ -9,10 +9,12 @@ import OurPrdFruits from './pages/OurPrdFruits';
 import OurPrdGrains from './pages/OurPrdGrains';
 import OurPrdSpices from './pages/OurPrdSpices';
 import Contact from './pages/Contact';
+import BackHome from './pages/BackHome';
 
 const App = () => {
   return (
     <>
+      <BackHome />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -24,7 +26,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
-      
+
     </>
   );
 }

@@ -2,8 +2,12 @@ import { Box, Container, Typography } from "@mui/material";
 import React from "react";
 import contactLine from '../../assets/images/contact/contactLine.png';
 import contactBg from "../../assets/images/contact/contactBg.png";
+import { useNavigate } from "react-router-dom";
 
 const ContactDec = () => {
+
+    const navigate = useNavigate();
+
     return (
         <>
             <Box
@@ -34,10 +38,10 @@ const ContactDec = () => {
                 <Container sx={{ zIndex: 2 }}>
                     <Box >
                         <Typography sx={{ fontWeight: 600, fontSize: '38px', mb: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                            <Typography component={'img'} src={contactLine} width={'20px'} alt="line" style={{ marginRight: '10px' }} />Our Products
+                            <Typography component={'img'} src={contactLine} width={'20px'} alt="line" style={{ marginRight: '10px' }} />Contact Us
                         </Typography>
-                        <Typography sx={{ mb: 1, ml: { sm: 15 }, fontSize: '14px', fontWeight: 500 }}>
-                            Home / Our Products / <Typography variant='span' sx={{ color: '#19AED7', fontWeight: 500 }}>Fresh Fruits & Vegetables</Typography>
+                        <Typography sx={{ mb: 1, ml: { sm: -4 }, fontSize: '14px', fontWeight: 500 }}>
+                            <Typography variant="span" onClick={() => navigate('/')} sx={{ cursor: 'pointer' }} >Home</Typography> / <Typography variant='span' sx={{ color: '#19AED7', fontWeight: 500 }}>Contact Us</Typography>
                         </Typography>
                     </Box>
                 </Container>

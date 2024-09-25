@@ -2,8 +2,12 @@ import { Box, Container, Typography } from "@mui/material";
 import React from "react";
 import backgroundimg from '../../assets/images/ourPrdGrains/grainsBg.png';
 import line from "../../assets/images/ourPrdGrains/GrainsLine.png";
+import { useNavigate } from "react-router-dom";
 
 const GrainsDec = () => {
+
+  const navigate = useNavigate();
+
   return (
     <>
       <Box
@@ -37,7 +41,7 @@ const GrainsDec = () => {
               <Typography component={'img'} src={line} width={'20px'} alt="line" style={{ marginRight: '10px' }} />Our Products
             </Typography>
             <Typography sx={{ mb: 1, ml: { sm: 8 }, fontSize: '14px', fontWeight: 500 }}>
-              Home / Our Products / <Typography variant='span' sx={{ color: '#19AED7', fontWeight: 500 }}>Grains & Pulses</Typography>
+              <Typography variant="span" onClick={() => navigate('/')} sx={{ cursor: 'pointer' }} >Home</Typography> / Our Products / <Typography variant='span' sx={{ color: '#19AED7', fontWeight: 500 }}>Grains & Pulses</Typography>
             </Typography>
           </Box>
         </Container>

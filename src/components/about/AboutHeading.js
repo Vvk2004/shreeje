@@ -3,8 +3,12 @@ import React from 'react'
 
 import Line from '../../assets/images/about/Line.png'
 import BG from '../../assets/images/about/bg.png'
+import { useNavigate } from 'react-router-dom'
 
 const AboutHeading = () => {
+
+    const navigate = useNavigate();
+
     return (
         <>
             <Box
@@ -46,7 +50,7 @@ const AboutHeading = () => {
                     <Typography
                         sx={{ mb: 1, fontSize: '14px', fontWeight: 500 }}
                     >
-                        Home / <Typography variant='span' style={{ color: '#19AED7' , fontWeight:500 }}>About Us</Typography>
+                        <Typography variant="span" onClick={() => navigate('/')} sx={{ cursor: 'pointer' }} >Home</Typography> / <Typography variant='span' style={{ color: '#19AED7' , fontWeight:500 }}>About Us</Typography>
                     </Typography>
                 </Container>
             </Box>
