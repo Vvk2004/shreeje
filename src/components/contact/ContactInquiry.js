@@ -28,11 +28,10 @@ const ContactInquiry = () => {
                             Let’s Grow Together
                         </Typography>
 
-                        <Box sx={{ mt: { xs: 8, sm: 14 } }}>
+                        <Box sx={{ mt: { xs: 5, sm: 14 } }}>
                             <Grid container spacing={2}>
                                 <Grid item xs={12} sm={5}>
-                                    <Box>
-                                        {/* Call to Us Section */}
+                                    <Box sx={{ mb: { sm: 0, xs: 5 } }}>
                                         <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mb: 3 }}>
                                             <IconButton sx={{ backgroundColor: "#19AED7", mr: 2 }} size="medium">
                                                 <PhoneIcon style={{ color: "white" }} />
@@ -47,7 +46,6 @@ const ContactInquiry = () => {
                                             </Box>
                                         </Box>
 
-                                        {/* Write to Us Section */}
                                         <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                             <IconButton sx={{ backgroundColor: "#19AED7", mr: 2 }} size="medium">
                                                 <EmailIcon style={{ color: "white" }} />
