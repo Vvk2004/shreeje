@@ -32,12 +32,12 @@ const AboutHeading = () => {
                         left: 0,
                         right: 0,
                         bottom: 0,
-                        backgroundColor: "#294462E5", // Add the semi-transparent color
-                        zIndex: 1, // Ensure this appears on top of the background image
+                        backgroundColor: "#294462E5",
+                        zIndex: 1,
                     },
                 }}
             >
-                <Container sx={{ zIndex: 2 }}> {/* Content on top of overlay */}
+                <Container sx={{ zIndex: 2 }}>
                     <Typography
                         sx={{
                             fontWeight: 600,
@@ -48,7 +48,7 @@ const AboutHeading = () => {
                         <Typography component={'img'} src={Line} width={'20px'} alt="line" style={{ marginRight: '10px' }} />About Us
                     </Typography>
                     <Typography
-                        sx={{ mb: 1, fontSize: '14px', fontWeight: 500 }}
+                        sx={{ mb: 1, ml: -2, fontSize: '14px', fontWeight: 500 }}
                     >
                         <Typography variant="span" onClick={() => navigate('/')} sx={{ cursor: 'pointer' }} >Home</Typography> / <Typography variant='span' style={{ color: '#19AED7' , fontWeight:500 }}>About Us</Typography>
                     </Typography>

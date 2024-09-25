@@ -40,7 +40,7 @@ const OurPrdDec = () => {
                         <Typography sx={{ fontWeight: 600, fontSize: '38px', mb: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                             <Typography component={'img'} src={twolines} width={'20px'} alt="line" style={{ marginRight: '10px' }} />Our Products
                         </Typography>
-                        <Typography sx={{ mb: 1, fontSize: '14px', fontWeight: 500 }}>
+                        <Typography sx={{ mb: 1, ml: -7, fontSize: '14px', fontWeight: 500 }}>
                             <Typography variant="span" onClick={() => navigate('/')} sx={{ cursor: 'pointer' }} >Home</Typography> / <Typography variant='span' sx={{ color: '#19AED7', fontWeight: 500 }}>Our Products</Typography>
                         </Typography>
                     </Box>
