@@ -29,7 +29,7 @@ const HomePrd = () => {
                             {products.map((product, index) => (
                                 <Grid item sm={4} xs={12} key={index}>
                                     <Box sx={{ position: 'relative' }}>
-                                        <Typography component={'img'} src={product.image} sx={{ width: '100%' }}></Typography>
+                                        <Typography component={'img'} src={product.image} sx={{ width: '100%', objectFit: 'cover', height: { sm: 'auto', xs: '350px' } }}></Typography>
                                         <Typography sx={{
                                             position: 'absolute',
                                             bottom: '5%',

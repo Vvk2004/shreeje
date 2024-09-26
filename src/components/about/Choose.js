@@ -32,7 +32,7 @@ const Choose = () => {
                         }}
                     >
                         <Box sx={{ display: 'flex', justifyContent: 'end', alignItems: 'center', mr: '10px' }}>
-                            <Typography  component={'img'} src={textLine} style={{ width: '70%', height: 'auto' }} alt="Line" />
+                            <Typography component={'img'} src={textLine} style={{ width: '70%', height: 'auto' }} alt="Line" />
                         </Box>
                         Why Choose Us?
                     </Typography>
@@ -44,9 +44,9 @@ const Choose = () => {
                             <Grid item xs={12} sm={6} key={index}>
                                 <Box sx={{ position: 'relative' }}>
                                     <Box>
-                                        <img
+                                        <Typography component={'img'}
                                             src={spice.img}
-                                            style={{ width: '100%', height: 'auto' }}
+                                            sx={{ width: '100%', height: { sm: 'auto', xs: '350px' } }}
                                             alt={spice.label}
                                         />
                                     </Box>
@@ -57,7 +57,7 @@ const Choose = () => {
                                         p: { lg: 5, xs: 3 },
                                         boxShadow: '0px 1px 20px #888888',
                                         width: { xs: '60%', md: '80%', sm: '90%' },
-                                        display: 'flex', justifyContent: 'center'
+                                        display: 'flex',
                                     }}>
                                         <Box>
                                             <Box>

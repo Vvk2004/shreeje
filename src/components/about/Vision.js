@@ -56,7 +56,7 @@ const Vision = () => {
                                                     color: '#7D7D7D',
                                                     display: 'flex',
                                                     justifyContent: 'center',
-                                                    fontSize: { lg: '18px', md: '16px', sm: '16px', xs: '14px' },
+                                                    fontSize: { lg: '16px', md: '12px', sm: '10px', xs: '12px' },
                                                     pt: 3,
                                                 }}>
                                                     {item.description}
@@ -102,7 +102,7 @@ const Vision = () => {
                                                     display: 'flex',
                                                     justifyContent: 'center',
                                                     textAlign: 'end',
-                                                    fontSize: { lg: '18px', md: '16px', sm: '16px', xs: '14px' },
+                                                    fontSize: { lg: '16px', md: '12px', sm: '10px', xs: '12px' },
                                                     pt: 3,
                                                 }}>
                                                     {item.description}
@@ -120,7 +120,7 @@ const Vision = () => {
                 <Box sx={{ position: 'absolute', top: { md: '-70px', sm: '-40px' }, left: { md: '130px', sm: '50px' }, zIndex: -1, display: { xs: 'none', sm: 'block' } }}>
                     <Typography component={'img'} src={Blue} sx={{ display: 'flex', width: { md: '70%', sm: '55%' } }}></Typography>
                 </Box>
-                <Box sx={{ position: 'absolute', bottom: { md: '70px', sm: '150px' }, right: { md: '-6px', sm: '-150px' }, zIndex: -1, display: { xs: 'none', sm: 'block' } }}>
+                <Box sx={{ position: 'absolute', bottom: { md: '70px', sm: '100px' }, right: { md: '-6px', sm: '-150px' }, zIndex: -1, display: { xs: 'none', sm: 'block' } }}>
                     <Typography component={'img'} src={Blue} sx={{ display: 'flex', width: { md: '70%', sm: '55%' } }}></Typography>
                 </Box>
             </Container>

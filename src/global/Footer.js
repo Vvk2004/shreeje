@@ -6,8 +6,12 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import Logo from '../assets/images/global/Logo.png'
 import { Input } from '@mui/joy'
+import { useNavigate } from 'react-router-dom'
 
 const Footer = () => {
+
+    const navigate = useNavigate();
+
     return (
         <>
             <Box sx={{ position: 'relative', mt: { xs: 10, sm: 30, md: 40 } }}>
@@ -55,7 +59,7 @@ const Footer = () => {
                                                 color: '#959595',
                                                 textAlign: 'center',
                                             }}
-                                          >
+                                        >
                                             Subscribe us & get updates in your inbox
                                         </Typography>
                                     </Box>
@@ -97,7 +101,9 @@ const Footer = () => {
                             }}
                         >
                             <Typography
+                                onClick={() => navigate('/')}
                                 sx={{
+                                    cursor: 'pointer',
                                     fontSize: { xs: '16px', sm: '18px' },
                                     fontWeight: '400',
                                     color: '#FFF',
@@ -108,7 +114,9 @@ const Footer = () => {
                             </Typography>
 
                             <Typography
+                                onClick={() => navigate('/about')}
                                 sx={{
+                                    cursor: 'pointer',
                                     fontSize: { xs: '16px', sm: '18px' },
                                     fontWeight: '400',
                                     color: '#FFF',
@@ -123,7 +131,9 @@ const Footer = () => {
                             </Box>
 
                             <Typography
+                                onClick={() => navigate('/ourProducts')}
                                 sx={{
+                                    cursor: 'pointer',
                                     fontSize: { xs: '16px', sm: '18px' },
                                     fontWeight: '400',
                                     color: '#FFF',
@@ -134,7 +144,9 @@ const Footer = () => {
                             </Typography>
 
                             <Typography
+                                onClick={() => navigate('/contact')}
                                 sx={{
+                                    cursor: 'pointer',
                                     fontSize: { xs: '16px', sm: '18px' },
                                     fontWeight: '400',
                                     color: '#FFF',
