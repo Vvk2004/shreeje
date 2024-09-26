@@ -52,7 +52,7 @@ const OurPrdFarming = () => {
                 <Container>
                     <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                         <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mb: 10 }}>
-                            <Typography sx={{ fontWeight: 600, fontSize: { sm: '40px', xs: '36px' }, alignItems: 'center', display: 'flex' }}>
+                            <Typography sx={{ fontWeight: 600, fontSize: { lg: '40px', md: '34px', sm: '24px', xs: '28px' }, alignItems: 'center', display: 'flex' }}>
                                 <Typography component={'img'} src={ourPrdTwoLines} width={'8%'} sx={{ mr: 1 }}></Typography>
                                 Sustainability
                             </Typography>

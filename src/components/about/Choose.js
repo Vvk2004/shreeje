@@ -4,7 +4,7 @@ import React from 'react';
 
 import Blue from '../../assets/images/about/Blue.png'
 import BlueSmall from '../../assets/images/about/Bluesmall.png'
-import Line from '../../assets/images/about/Line.png'
+import textLine from '../../assets/images/about/txtLine.png'
 import C1 from '../../assets/images/about/Choose1.png'
 import C2 from '../../assets/images/about/Choose2.png'
 import C3 from '../../assets/images/about/Choose3.png'
@@ -27,12 +27,12 @@ const Choose = () => {
                             display: 'flex',
                             justifyContent: 'center',
                             alignItems: 'center',
-                            fontSize: { xs: '24px', sm: '28px', md: '30px' },
+                            fontSize: { lg: '40px', md: '34px', sm: '24px', xs: '28px' },
                             fontWeight: '600',
                         }}
                     >
                         <Box sx={{ display: 'flex', justifyContent: 'end', alignItems: 'center', mr: '10px' }}>
-                            <img src={Line} style={{ width: '70%', height: 'auto' }} alt="Line" />
+                            <Typography  component={'img'} src={textLine} style={{ width: '70%', height: 'auto' }} alt="Line" />
                         </Box>
                         Why Choose Us?
                     </Typography>

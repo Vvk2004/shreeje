@@ -3,8 +3,6 @@ import React from 'react'
 import homeBg from '../../assets/images/home/homeBg.png'
 import twoLines from '../../assets/images/global/twolines.png'
 import homeBgShip from '../../assets/images/home/homeBgShip.png'
-import blueKoma from '../../assets/images/home/bluekoma.png'
-import blackKoma from '../../assets/images/home/blackkoma.png'
 
 const HomeDec = () => {
     return (
@@ -16,7 +14,7 @@ const HomeDec = () => {
                 backgroundPosition: 'center',
                 pb: { md: 25, sm: 10, xs: 20 },
                 display: 'flex',
-                height: { sm: '100vh', xs: '70vh'},
+                height: { sm: '100vh', xs: '75vh'},
                 alignItems: 'center',
                 position: 'relative',
                 mb: { sm: 20, xs: 15 },
@@ -28,7 +26,7 @@ const HomeDec = () => {
                                 <Typography component={'img'} src={twoLines} sx={{ mr: 2, width: { lg: '100%', md: '80%', sm: '60%', xs: '70%' } }} />
                             </Box>
                             <Box>
-                                <Typography variant='h4' sx={{ fontWeight: 600, ml: { md: 2 }, color: '#fff', fontSize: { lg: '40px', md: '34px', sm: '24px', xs: '21px' } }}>
+                                <Typography variant='h4' sx={{ fontWeight: 600, ml: { md: 2 }, color: '#fff', fontSize: { lg: '40px', md: '34px', sm: '24px', xs: '28px' } }}>
                                     “Trade Without Borders, Shine
                                     <Box component="span" sx={{ color: '#19AED7' }}> Without Limits”</Box>
                                 </Typography>

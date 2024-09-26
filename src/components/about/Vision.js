@@ -3,6 +3,7 @@ import React from 'react'
 
 import Blue from '../../assets/images/about/Blue.png'
 import Line from '../../assets/images/about/Line.png'
+import txtLine from '../../assets/images/about/txtLine.png'
 import Eye from '../../assets/images/about/eye.png'
 import Gole from '../../assets/images/about/gole.png'
 
@@ -37,29 +38,29 @@ const Vision = () => {
                                 <Grid item xs={12} sm={6} sx={{ display: 'flex', justifyContent: 'end' }}>
                                     <Box sx={{ width: { sm: '70%', xs: '100%' }, mt: { sm: 0, xs: 2 } }}>
                                         <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                                            <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start' }}>
-                                                <Box sx={{ pr: 1, width: '50px' }}>
-                                                    <Typography component={'img'} src={Line} sx={{ display: 'flex', width: '100%', height: 'auto' }}></Typography>
-                                                </Box>
-                                                <Box>
+                                            <Box sx={{ display: '', justifyContent: 'center', alignItems: 'flex-start' }}>
+                                                <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                                                    <Box sx={{ pr: 2 }}>
+                                                        <Typography component={'img'} src={txtLine} sx={{ display: 'flex', alignItems: 'center' }}></Typography>
+                                                    </Box>
                                                     <Typography sx={{
-                                                        fontSize: { lg: '36px', md: '30px', sm: '24px', xs: '26px' },
+                                                        fontSize: { lg: '40px', md: '34px', sm: '24px', xs: '28px' },
                                                         fontWeight: '600',
                                                         lineHeight: '1.2',
                                                         color: '#333',
                                                     }}>
                                                         {item.title}
                                                     </Typography>
-                                                    <Typography sx={{
-                                                        color: '#7D7D7D',
-                                                        display: 'flex',
-                                                        justifyContent: 'center',
-                                                        fontSize: { lg: '18px', md: '16px', sm: '16px', xs: '14px' },
-                                                        pt: 3,
-                                                    }}>
-                                                        {item.description}
-                                                    </Typography>
                                                 </Box>
+                                                <Typography sx={{
+                                                    color: '#7D7D7D',
+                                                    display: 'flex',
+                                                    justifyContent: 'center',
+                                                    fontSize: { lg: '18px', md: '16px', sm: '16px', xs: '14px' },
+                                                    pt: 3,
+                                                }}>
+                                                    {item.description}
+                                                </Typography>
                                             </Box>
                                         </Box>
                                     </Box>
@@ -77,32 +78,35 @@ const Vision = () => {
                             {item.imageFirst && (
                                 <Grid item xs={12} sm={6} sx={{ display: 'flex', justifyContent: 'start', my: { xs: 2, sm: 20 } }}>
                                     <Box sx={{ width: { sm: '70%', xs: '100%' }, mt: { sm: 0, xs: 2 } }}>
-                                        <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                                            <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                                                <Box sx={{ textAlign: '-webkit-right' }}>
+                                        <Box sx={{ display: '', justifyContent: 'center' }}>
+                                            <Box sx={{ display: 'flex', justifyContent: 'end' }}>
+                                                <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'webkit-right' }}>
                                                     <Typography sx={{
-                                                        fontSize: { lg: '36px', md: '30px', sm: '24px', xs: '26px' },
+                                                        fontSize: { lg: '40px', md: '34px', sm: '24px', xs: '28px' },
                                                         fontWeight: '600',
                                                         textAlign: 'end',
+                                                        alignItems: 'center',
                                                         lineHeight: '1.2',
                                                         color: '#333',
                                                     }}>
                                                         {item.title}
                                                     </Typography>
-                                                    <Typography sx={{
-                                                        color: '#7D7D7D',
-                                                        display: 'flex',
-                                                        justifyContent: 'center',
-                                                        textAlign: 'end',
-                                                        fontSize: { lg: '18px', md: '16px', sm: '16px', xs: '14px' },
-                                                        pt: 3,
-                                                    }}>
-                                                        {item.description}
-                                                    </Typography>
+                                                    <Box sx={{ width: '60px', display: 'flex', justifyContent: 'end' }}>
+                                                        <Typography component={'img'} src={txtLine} sx={{ display: 'flex', justifyContent: 'end' }}></Typography>
+                                                    </Box>
                                                 </Box>
-                                                <Box sx={{ pl: 1, width: '60px', mt: 1 }}>
-                                                    <Typography component={'img'} src={Line} sx={{ display: 'flex', width: '100%', height: 'auto' }}></Typography>
-                                                </Box>
+                                            </Box>
+                                            <Box>
+                                                <Typography sx={{
+                                                    color: '#7D7D7D',
+                                                    display: 'flex',
+                                                    justifyContent: 'center',
+                                                    textAlign: 'end',
+                                                    fontSize: { lg: '18px', md: '16px', sm: '16px', xs: '14px' },
+                                                    pt: 3,
+                                                }}>
+                                                    {item.description}
+                                                </Typography>
                                             </Box>
                                         </Box>
                                     </Box>

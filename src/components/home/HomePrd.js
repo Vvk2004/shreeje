@@ -20,7 +20,7 @@ const HomePrd = () => {
                 <Container>
                     <Box sx={{ position: 'relative' }}>
                         <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mb: { md: 10, xs: 5 } }}>
-                            <Typography sx={{ fontWeight: 600, fontSize: { sm: '40px', xs: '36px' }, alignItems: 'center', display: 'flex' }}>
+                            <Typography sx={{ fontWeight: 600, fontSize: { lg: '40px', md: '34px', sm: '24px', xs: '28px' }, alignItems: 'center', display: 'flex' }}>
                                 <Typography component={'img'} src={homeTwoLines} width={'8%'} sx={{ mr: 1 }}></Typography>
                                 Our Products
                             </Typography>

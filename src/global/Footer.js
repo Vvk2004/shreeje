@@ -39,8 +39,8 @@ const Footer = () => {
                                                 justifyContent: 'center',
                                                 alignItems: 'center',
                                                 fontSize: { xs: '20px', md: '30px' },
-                                                fontWeight: '500',
-                                                color: '#444',
+                                                fontWeight: 700,
+                                                color: '#000',
                                             }}
                                         >
                                             Newsletter
@@ -51,11 +51,11 @@ const Footer = () => {
                                                 justifyContent: 'center',
                                                 alignItems: 'center',
                                                 fontSize: '14px',
-                                                fontWeight: '500',
+                                                fontWeight: 500,
                                                 color: '#959595',
                                                 textAlign: 'center',
                                             }}
-                                        >
+                                          >
                                             Subscribe us & get updates in your inbox
                                         </Typography>
                                     </Box>

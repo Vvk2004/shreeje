@@ -30,13 +30,13 @@ const OurPrdRange = () => {
     return (
         <Box sx={{ mt: { lg: 30, sm: 20, xs: 10 } }}>
             <Container>
-                <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mb: 10 }}>
                     <Box>
-                        <Typography sx={{ fontWeight: 600, fontSize: { md: '40px', sm: '36px', xs: '28px' }, alignItems: 'center', display: 'flex' }}>
+                        <Typography sx={{ fontWeight: 600, fontSize: { lg: '40px', md: '34px', sm: '24px', xs: '28px' }, alignItems: 'center', display: 'flex' }}>
                             <Typography component={'img'} src={ourPrdTwoLines} sx={{ mr: 1 }}></Typography>
                             Explore Our Full Product Range
                         </Typography>
-                        <Typography sx={{ color: '#6F6F6F', fontWeight: 500, display: 'flex', justifyContent: 'center', fontSize: { md: '26px', md: '24px', sm: '20px', xs: '12px' }, mt: 2 }}>“How We Ensure Quality from Farm to Market”</Typography>
+                        <Typography sx={{ color: '#6F6F6F', fontWeight: 500, display: 'flex', justifyContent: 'center', fontSize: { md: '26px', md: '20px', xs: '12px' }, mt: 2 }}>“How We Ensure Quality from Farm to Market”</Typography>
                     </Box>
                 </Box>
                 <Grid container sx={{ px: { md: 13, sm: 10, xs: 2 } }} spacing={{ md:10, xs: 5}}>

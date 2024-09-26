@@ -41,16 +41,19 @@ const AboutHeading = () => {
                     <Typography
                         sx={{
                             fontWeight: 600,
-                            fontSize: '38px',
+                            alignItems: 'center',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            fontSize: { lg: '40px', md: '34px', sm: '24px', xs: '28px' },
                             mb: 1
                         }}
                     >
                         <Typography component={'img'} src={Line} width={'20px'} alt="line" style={{ marginRight: '10px' }} />About Us
                     </Typography>
                     <Typography
-                        sx={{ mb: 1, ml: -2, fontSize: '14px', fontWeight: 500 }}
+                        sx={{ mb: 1, ml: { lg: -3, md: 0, sm: 5, xs: 3 }, fontSize: '14px', fontWeight: 500 }}
                     >
-                        <Typography variant="span" onClick={() => navigate('/')} sx={{ cursor: 'pointer' }} >Home</Typography> / <Typography variant='span' style={{ color: '#19AED7' , fontWeight:500 }}>About Us</Typography>
+                        <Typography variant="span" onClick={() => navigate('/')} sx={{ cursor: 'pointer' }} >Home</Typography> / <Typography variant='span' style={{ color: '#19AED7', fontWeight: 500 }}>About Us</Typography>
                     </Typography>
                 </Container>
             </Box>

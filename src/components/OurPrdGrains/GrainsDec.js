@@ -37,10 +37,10 @@ const GrainsDec = () => {
       >
         <Container sx={{ zIndex: 2 }}>
           <Box >
-            <Typography sx={{ fontWeight: 600, fontSize: '38px', mb: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <Typography sx={{ fontWeight: 600, fontSize: { lg: '40px', md: '34px', sm: '24px', xs: '28px' }, mb: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <Typography component={'img'} src={line} width={'20px'} alt="line" style={{ marginRight: '10px' }} />Our Products
             </Typography>
-            <Typography sx={{ mb: 1, ml: { sm: 8 }, fontSize: '14px', fontWeight: 500 }}>
+            <Typography sx={{ mb: 1, ml: { lg: 7, md: 11, sm: 19 }, fontSize: '14px', fontWeight: 500 }}>
               <Typography variant="span" onClick={() => navigate('/')} sx={{ cursor: 'pointer' }} >Home</Typography> / <Typography variant="span" onClick={() => navigate('/ourProducts')} sx={{ cursor: 'pointer' }}>Our Products</Typography> / <Typography variant='span' sx={{ color: '#19AED7', fontWeight: 500 }}>Grains & Pulses</Typography>
             </Typography>
           </Box>

@@ -19,17 +19,19 @@ const HomeBenefits = () => {
                 <Container>
                     <Box sx={{ position: 'relative' }}>
                         <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mb: { md: 10, xs: 5 } }}>
-                            <Typography sx={{ fontWeight: 600, fontSize: { sm: '40px', sm: '36px', xs: '22px' }, alignItems: 'center', display: 'flex' }}>
-                                <Typography component={'img'} src={homeTwoLines} sx={{ mr: 1 }}></Typography>
-                                Benefits of Partnering
-                            </Typography>
+                            <Typography component={'img'} src={homeTwoLines} sx={{ mr: 1 }}></Typography>
+                            <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                                <Typography variant='span' sx={{ fontWeight: 600, fontSize: { lg: '40px', md: '34px', sm: '24px', xs: '28px' }, alignItems: 'center', display: 'flex' }}>
+                                    Benefits of Partnering
+                                </Typography>
+                            </Box>
                         </Box>
                         <Grid container spacing={{ md: 10, sm: 5, xs: 10 }}>
                             {products.map((product, index) => (
                                 <Grid item sm={4} xs={12} key={index}>
-                                    <Box sx={{ position: 'relative', backgroundColor: '#fff', boxShadow: 1, height: { md: '300px', sm: '200px', xs: '300px'}, display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
-                                        <Typography component={'img'} src={product.image} sx={{ position: 'absolute', top: '10%', left: { sm: '-10%', xs: '-3%'}, maxWidth: { md: '100%', sm: '80%', xs: '100%'} }} />
-                                        <Typography sx={{ color: '#555555', fontWeight: 500, pl: { lg: 8, md: 5, sm: 3, xs: 8 }, py: { md: 3, sm: 1, xs: 3}, fontSize: { md: '16px', sm: '14px', xs: '16px'} }}>
+                                    <Box sx={{ position: 'relative', backgroundColor: '#fff', boxShadow: 1, height: { md: '300px', sm: '200px', xs: '300px' }, display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
+                                        <Typography component={'img'} src={product.image} sx={{ position: 'absolute', top: '10%', left: { sm: '-10%', xs: '-3%' }, maxWidth: { md: '100%', sm: '80%', xs: '100%' } }} />
+                                        <Typography sx={{ color: '#555555', fontWeight: 500, pl: { lg: 8, md: 5, sm: 3, xs: 8 }, py: { md: 3, sm: 1, xs: 3 }, fontSize: { md: '16px', sm: '14px', xs: '16px' } }}>
                                             {product.label}
                                         </Typography>
                                     </Box>

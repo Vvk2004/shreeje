@@ -1,6 +1,7 @@
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import React, { useState, useEffect } from 'react';
 import NavigationIcon from '@mui/icons-material/Navigation';
+
 function BackHome() {
   const [showButton, setShowButton] = useState(false);
   const handleScroll = () => {

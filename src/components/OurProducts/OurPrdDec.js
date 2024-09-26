@@ -1,6 +1,6 @@
 import { Box, Container, Typography } from '@mui/material'
 import React from 'react'
-import twolines from '../../assets/images/global/twolines.png'
+import twolines from '../../assets/images/ourProducts/ourPrdTwoLines.png'
 import ourPrdBg from '../../assets/images/ourProducts/ourPrdBg.png'
 import { useNavigate } from 'react-router-dom'
 
@@ -37,10 +37,10 @@ const OurPrdDec = () => {
             >
                 <Container sx={{ zIndex: 2 }}>
                     <Box >
-                        <Typography sx={{ fontWeight: 600, fontSize: '38px', mb: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                        <Typography sx={{ fontWeight: 600, fontSize: { lg: '40px', md: '34px', sm: '24px', xs: '28px' }, mb: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                             <Typography component={'img'} src={twolines} width={'20px'} alt="line" style={{ marginRight: '10px' }} />Our Products
                         </Typography>
-                        <Typography sx={{ mb: 1, ml: -7, fontSize: '14px', fontWeight: 500 }}>
+                        <Typography sx={{ mb: 1, ml: { lg: -9, md: -5, sm: 3 }, fontSize: '14px', fontWeight: 500 }}>
                             <Typography variant="span" onClick={() => navigate('/')} sx={{ cursor: 'pointer' }} >Home</Typography> / <Typography variant='span' sx={{ color: '#19AED7', fontWeight: 500 }}>Our Products</Typography>
                         </Typography>
                     </Box>

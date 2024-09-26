@@ -3,7 +3,7 @@ import Input from '@mui/joy/Input';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 
-import Line from '../../assets/images/contact/contactLine.png'
+import contantTwoLines from '../../assets/images/contact/contantTwoLines.png'
 import { Textarea } from "@mui/joy";
 import BlueBox from '../../assets/images/contact/BlueBox.png'
 
@@ -18,12 +18,12 @@ const ContactInquiry = () => {
                                 display: 'flex',
                                 justifyContent: 'center',
                                 alignItems: 'center',
-                                fontSize: { xs: '24px', sm: '28px', md: '30px' },
+                                fontSize: { lg: '40px', md: '34px', sm: '24px', xs: '28px' },
                                 fontWeight: '600',
                             }}
                         >
                             <Box sx={{ display: 'flex', justifyContent: 'end', alignItems: 'center', mr: '10px' }}>
-                                <Typography component={'img'} src={Line} sx={{ width: '70%', height: 'auto' }} alt="Line" />
+                                <Typography component={'img'} src={contantTwoLines} sx={{ width: '70%', height: 'auto' }} alt="Line" />
                             </Box>
                             Let’s Grow Together
                         </Typography>
