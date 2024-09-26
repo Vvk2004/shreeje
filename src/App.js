@@ -14,19 +14,24 @@ import { useEffect } from 'react';
 import Aos from 'aos';
 
 const App = () => {
-
   useEffect(() => {
     Aos.init({
       once: false,
       duration: 1200,
-      easing: "ease",
+      easing: 'ease',
     });
   }, []);
+
   function ScrollToTop() {
     const { pathname } = useLocation();
+
     useEffect(() => {
-      window.scrollTo(0, 0);
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
     }, [pathname]);
+
     return null;
   }
 
@@ -46,9 +51,8 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
-
     </>
   );
-}
+};
 
 export default App;
