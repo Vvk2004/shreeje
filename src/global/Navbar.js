@@ -378,14 +378,14 @@ const Navbar = () => {
                                 sx={getItemStyles(isActiveRoute('/'))}
                             >
                                 <Typography className='lines' component={'img'} src={line} sx={{ display: 'none', mr: 1 }}></Typography>
-                                <Typography>Home</Typography>
+                                <Typography className='navItem' >Home</Typography>
                             </MenuItem>
                             <MenuItem
                                 onClick={() => navigate('/about')}
                                 sx={getItemStyles(isActiveRoute('/about'))}
                             >
                                 <Typography className='lines' component={'img'} src={line} sx={{ display: 'none', mr: 1 }}></Typography>
-                                <Typography>About</Typography>
+                                <Typography className='navItem' >About</Typography>
                             </MenuItem>
                             <MenuItem
                                 onMouseEnter={() => setSubmenuOpen(true)}
@@ -393,7 +393,7 @@ const Navbar = () => {
                                 sx={getItemStyles(isActiveRoute('/ourProducts'))}
                             >
                                 <Typography className='lines' component={'img'} src={line} sx={{ display: 'none', mr: 1 }}></Typography>
-                                <Typography>Our Products</Typography>
+                                <Typography className='navItem' >Our Products</Typography>
                                 {submenuOpen && (
                                     <Box sx={{ position: 'absolute', p: 2, top: '100%', left: '-20%', zIndex: 111, backgroundColor: '#fff', boxShadow: 2 }}>
                                         <MenuItem onClick={() => closeSubmenuAndNavigate('/ourProducts')} sx={getSubmenuItemStyles(isActiveRoute('/ourProducts'))}>
@@ -420,7 +420,7 @@ const Navbar = () => {
                                 sx={getItemStyles(isActiveRoute('/contact'))}
                             >
                                 <Typography className='lines' component={'img'} src={line} sx={{ display: 'none', mr: 1 }}></Typography>
-                                <Typography>Contact Us</Typography>
+                                <Typography className='navItem' >Contact Us</Typography>
                             </MenuItem>
                         </Box>
                         <Box sx={{ display: { sm: 'none', xs: 'flex' }, justifyContent: 'end', alignItems: 'center' }}>
@@ -503,11 +503,13 @@ const getItemStyles = (isActive) => ({
     color: '#A0A0A0',
     '&:hover': {
         color: '#19AED7',
-        fontWeight: 600,
-        transition: '0.5s',
     },
     '&:hover .lines': {
         display: 'block',
+        transition: '0.5s',
+    },
+    '&:hover .navItem': {
+        fontWeight: 600,
         transition: '0.5s',
     },
     ...(isActive && {
@@ -515,6 +517,9 @@ const getItemStyles = (isActive) => ({
         fontWeight: 600,
         '.lines': {
             display: 'block',
+        },
+        '.navItem': {
+            fontWeight: 600
         },
     }),
 });
