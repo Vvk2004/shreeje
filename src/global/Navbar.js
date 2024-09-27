@@ -1,6 +1,6 @@
 import { Box, Container, Grid, MenuItem, Select, Typography, Drawer, IconButton, Collapse } from '@mui/material';
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import EmailIcon from '@mui/icons-material/Email';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -268,10 +268,13 @@ const Navbar = () => {
     const [submenuOpen, setSubmenuOpen] = useState(false);
     const [sidebarSubmenuOpen, setSidebarSubmenuOpen] = useState(false);
     const navigate = useNavigate();
+    const location = useLocation(); 
 
     const handleChange = (event) => {
         setSelectedValue(event.target.value);
     };
+
+    const isActiveRoute = (path) => location.pathname === path;
 
     const toggleSidebar = () => {
         setSidebarOpen(!sidebarOpen);
@@ -369,40 +372,49 @@ const Navbar = () => {
                 <Container>
                     <Box>
                         <Box sx={{ display: { sm: 'flex', xs: 'none' }, justifyContent: 'center' }}>
-                            <MenuItem onClick={() => navigate('/')} sx={getItemStyles()}>
+                            <MenuItem
+                                onClick={() => navigate('/')}
+                                sx={getItemStyles(isActiveRoute('/'))}
+                            >
                                 <Typography>Home</Typography>
                             </MenuItem>
-                            <MenuItem onClick={() => navigate('/about')} sx={getItemStyles()}>
+                            <MenuItem
+                                onClick={() => navigate('/about')}
+                                sx={getItemStyles(isActiveRoute('/about'))}
+                            >
                                 <Typography>About</Typography>
                             </MenuItem>
                             <MenuItem
                                 onMouseEnter={() => setSubmenuOpen(true)}
                                 onMouseLeave={() => setSubmenuOpen(false)}
-                                sx={getItemStyles()}
+                                sx={getItemStyles(isActiveRoute('/ourProducts'))}
                             >
                                 <Typography>Our Products</Typography>
                                 {submenuOpen && (
                                     <Box sx={{ position: 'absolute', p: 2, top: '100%', left: '-20%', zIndex: 111, backgroundColor: '#fff', boxShadow: 2 }}>
-                                        <MenuItem onClick={() => closeSubmenuAndNavigate('/ourProducts')} sx={getSubmenuItemStyles()}>
+                                        <MenuItem onClick={() => closeSubmenuAndNavigate('/ourProducts')} sx={getSubmenuItemStyles(isActiveRoute('/ourProducts'))}>
                                             <ArrowRightIcon />
                                             Our Products
                                         </MenuItem>
-                                        <MenuItem onClick={() => closeSubmenuAndNavigate('/ourPrdFruits')} sx={getSubmenuItemStyles()}>
+                                        <MenuItem onClick={() => closeSubmenuAndNavigate('/ourPrdFruits')} sx={getSubmenuItemStyles(isActiveRoute('/ourPrdFruits'))}>
                                             <ArrowRightIcon />
                                             Our Products Fruits
                                         </MenuItem>
-                                        <MenuItem onClick={() => closeSubmenuAndNavigate('/ourPrdGrains')} sx={getSubmenuItemStyles()}>
+                                        <MenuItem onClick={() => closeSubmenuAndNavigate('/ourPrdGrains')} sx={getSubmenuItemStyles(isActiveRoute('/ourPrdGrains'))}>
                                             <ArrowRightIcon />
                                             Our Products Grains
                                         </MenuItem>
-                                        <MenuItem onClick={() => closeSubmenuAndNavigate('/ourPrdSpices')} sx={getSubmenuItemStyles()}>
+                                        <MenuItem onClick={() => closeSubmenuAndNavigate('/ourPrdSpices')} sx={getSubmenuItemStyles(isActiveRoute('/ourPrdSpices'))}>
                                             <ArrowRightIcon />
                                             Our Products Spices
                                         </MenuItem>
                                     </Box>
                                 )}
                             </MenuItem>
-                            <MenuItem onClick={() => navigate('/contact')} sx={getItemStyles()}>
+                            <MenuItem
+                                onClick={() => navigate('/contact')}
+                                sx={getItemStyles(isActiveRoute('/contact'))}
+                            >
                                 <Typography>Contact Us</Typography>
                             </MenuItem>
                         </Box>
@@ -433,41 +445,42 @@ const Navbar = () => {
                         </IconButton>
                     </Box>
 
-                    {/* Sidebar Navigation Items */}
-                    <MenuItem onClick={() => { toggleSidebar(); navigate('/'); }} sx={getSidebarItemStyles()}>
+                    {/* ==================== Sidebar Navigation Items ==================== */}
+                    <MenuItem onClick={() => { toggleSidebar(); navigate('/'); }} sx={getSidebarItemStyles(isActiveRoute('/'))}>
                         <HomeIcon />
                         <Typography>Home</Typography>
                     </MenuItem>
-                    <MenuItem onClick={() => { toggleSidebar(); navigate('/about'); }} sx={getSidebarItemStyles()}>
+                    <MenuItem onClick={() => { toggleSidebar(); navigate('/about'); }} sx={getSidebarItemStyles(isActiveRoute('/about'))}>
                         <InfoIcon />
                         <Typography>About Us</Typography>
                     </MenuItem>
 
-                    <MenuItem onClick={toggleSidebarSubmenu} sx={getSidebarItemStyles()}>
+                    <MenuItem onClick={toggleSidebarSubmenu} sx={getSidebarItemStyles(isActiveRoute('/ourProducts'))}>
                         <StorefrontIcon />
                         <Typography>Our Products</Typography>
                         <ExpandMoreIcon />
                     </MenuItem>
-                    <Collapse in={sidebarSubmenuOpen} timeout="auto" unmountOnExit>
-                        <MenuItem onClick={() => closeSidebarAndNavigate('/ourProducts')} sx={getSidebarSubmenuItemStyles()}>
+
+                    <Collapse in={sidebarSubmenuOpen}>
+                        <MenuItem onClick={() => closeSidebarAndNavigate('/ourProducts')} sx={getSidebarSubmenuItemStyles(isActiveRoute('/ourProducts'))}>
                             <ArrowRightIcon />
                             Our Products
                         </MenuItem>
-                        <MenuItem onClick={() => closeSidebarAndNavigate('/ourPrdFruits')} sx={getSidebarSubmenuItemStyles()}>
+                        <MenuItem onClick={() => closeSidebarAndNavigate('/ourPrdFruits')} sx={getSidebarSubmenuItemStyles(isActiveRoute('/ourPrdFruits'))}>
                             <ArrowRightIcon />
                             Our Products Fruits
                         </MenuItem>
-                        <MenuItem onClick={() => closeSidebarAndNavigate('/ourPrdGrains')} sx={getSidebarSubmenuItemStyles()}>
+                        <MenuItem onClick={() => closeSidebarAndNavigate('/ourPrdGrains')} sx={getSidebarSubmenuItemStyles(isActiveRoute('/ourPrdGrains'))}>
                             <ArrowRightIcon />
                             Our Products Grains
                         </MenuItem>
-                        <MenuItem onClick={() => closeSidebarAndNavigate('/ourPrdSpices')} sx={getSidebarSubmenuItemStyles()}>
+                        <MenuItem onClick={() => closeSidebarAndNavigate('/ourPrdSpices')} sx={getSidebarSubmenuItemStyles(isActiveRoute('/ourPrdSpices'))}>
                             <ArrowRightIcon />
                             Our Products Spices
                         </MenuItem>
                     </Collapse>
 
-                    <MenuItem onClick={() => { toggleSidebar(); navigate('/contact'); }} sx={getSidebarItemStyles()}>
+                    <MenuItem onClick={() => { toggleSidebar(); navigate('/contact'); }} sx={getSidebarItemStyles(isActiveRoute('/contact'))}>
                         <ContactMailIcon />
                         <Typography>Contact Us</Typography>
                     </MenuItem>
@@ -477,35 +490,60 @@ const Navbar = () => {
     );
 };
 
-const getItemStyles = () => ({
-    py: 2,
+
+const getItemStyles = (isActive) => ({
+    position: 'relative',
+    py: 2.5,
     px: 4,
     color: '#A0A0A0',
-    '&:hover': { backgroundColor: 'unset', color: '#19AED7', transition: '0.5s', fontWeight: 600 },
+    '&:hover': {
+        color: '#19AED7',
+        fontWeight: 600,
+    },
+    ...(isActive && {
+        color: '#19AED7',
+        fontWeight: 600,
+    })
 });
 
-const getSubmenuItemStyles = () => ({
-    p: 2,
+const getSubmenuItemStyles = (isActive) => ({
+    p: 1,
     color: '#A0A0A0',
-    '&:hover': { backgroundColor: 'unset', color: '#19AED7', transition: '0.5s', fontWeight: 600 },
-});
-const getSidebarSubmenuItemStyles = () => ({
-    py: 1,
-    px: 3,
-    color: '#fff',
-    fontWeight: 600,
-    '&:hover': { backgroundColor: '#19AED7', transition: '0.5s' },
+    '&:hover': {
+        color: '#19AED7',
+        fontWeight: 600,
+    },
+    ...(isActive && {
+        color: '#19AED7',
+        fontWeight: 600,
+    })
 });
 
-const getSidebarItemStyles = () => ({
-    px: 2,
+const getSidebarItemStyles = (isActive) => ({
+    px: 1,
     py: 1,
-    color: '#fff',
+    '&:hover': {
+        backgroundColor: '#19AED7',
+    },
     display: 'flex',
-    justifyContent: 'flex-start',
+    alignItems: 'center',
+    gap: 1.5,
+    ...(isActive && {
+        backgroundColor: '#19AED7',
+    })
+});
+
+const getSidebarSubmenuItemStyles = (isActive) => ({
+    p: 1,
+    '&:hover': {
+        backgroundColor: '#19AED7',
+    },
+    display: 'flex',
     alignItems: 'center',
     gap: 1,
-    '&:hover': { backgroundColor: '#19AED7' },
+    ...(isActive && {
+        backgroundColor: '#19AED7',
+    })
 });
 
 export default Navbar;
