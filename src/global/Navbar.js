@@ -382,7 +382,7 @@ const Navbar = () => {
                             >
                                 <Typography>Our Products</Typography>
                                 {submenuOpen && (
-                                    <Box sx={{ position: 'absolute', p: 2, top: '100%', left: '-30%', zIndex: 111, backgroundColor: '#fff', boxShadow: 2 }}>
+                                    <Box sx={{ position: 'absolute', p: 2, top: '100%', left: '-20%', zIndex: 111, backgroundColor: '#fff', boxShadow: 2 }}>
                                         <MenuItem onClick={() => closeSubmenuAndNavigate('/ourProducts')} sx={getSubmenuItemStyles()}>
                                             <ArrowRightIcon />
                                             Our Products
@@ -478,18 +478,20 @@ const Navbar = () => {
 };
 
 const getItemStyles = () => ({
-    p: 2,
+    py: 2,
+    px: 4,
     color: '#A0A0A0',
-    '&:hover': { backgroundColor: 'unset', color: '#19AED7', transition: '0.5s' },
+    '&:hover': { backgroundColor: 'unset', color: '#19AED7', transition: '0.5s', fontWeight: 600 },
 });
 
 const getSubmenuItemStyles = () => ({
     p: 2,
     color: '#A0A0A0',
-    '&:hover': { backgroundColor: 'unset', color: '#19AED7', transition: '0.5s' },
+    '&:hover': { backgroundColor: 'unset', color: '#19AED7', transition: '0.5s', fontWeight: 600 },
 });
 const getSidebarSubmenuItemStyles = () => ({
-    p: 2,
+    py: 1,
+    px: 3,
     color: '#fff',
     fontWeight: 600,
     '&:hover': { backgroundColor: '#19AED7', transition: '0.5s' },
