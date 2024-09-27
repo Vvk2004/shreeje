@@ -1,4 +1,4 @@
-import { Box, Container, Grid, MenuItem, Select, Typography, Drawer, IconButton, Divider, Collapse } from '@mui/material';
+import { Box, Container, Grid, MenuItem, Select, Typography, Drawer, IconButton, Collapse } from '@mui/material';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import EmailIcon from '@mui/icons-material/Email';
@@ -382,17 +382,21 @@ const Navbar = () => {
                             >
                                 <Typography>Our Products</Typography>
                                 {submenuOpen && (
-                                    <Box sx={{ position: 'absolute', top: '100%', left: '-10%', zIndex: 111, backgroundColor: '#fff', boxShadow: 2 }}>
+                                    <Box sx={{ position: 'absolute', p: 2, top: '100%', left: '-30%', zIndex: 111, backgroundColor: '#fff', boxShadow: 2 }}>
                                         <MenuItem onClick={() => closeSubmenuAndNavigate('/ourProducts')} sx={getSubmenuItemStyles()}>
+                                            <ArrowRightIcon />
                                             Our Products
                                         </MenuItem>
                                         <MenuItem onClick={() => closeSubmenuAndNavigate('/ourPrdFruits')} sx={getSubmenuItemStyles()}>
+                                            <ArrowRightIcon />
                                             Our Products Fruits
                                         </MenuItem>
                                         <MenuItem onClick={() => closeSubmenuAndNavigate('/ourPrdGrains')} sx={getSubmenuItemStyles()}>
+                                            <ArrowRightIcon />
                                             Our Products Grains
                                         </MenuItem>
                                         <MenuItem onClick={() => closeSubmenuAndNavigate('/ourPrdSpices')} sx={getSubmenuItemStyles()}>
+                                            <ArrowRightIcon />
                                             Our Products Spices
                                         </MenuItem>
                                     </Box>
