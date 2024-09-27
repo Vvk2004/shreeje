@@ -275,7 +275,14 @@ const Navbar = () => {
         setSelectedValue(event.target.value);
     };
 
-    const isActiveRoute = (path) => location.pathname === path;
+    const isActiveRoute = (routes) => {
+        if (!Array.isArray(routes)) {
+            routes = [routes];
+        }
+        const currentPath = window.location.pathname;
+        return routes.some(route => route === '/' ? currentPath === route : currentPath.startsWith(route));
+    };
+
 
     const toggleSidebar = () => {
         setSidebarOpen(!sidebarOpen);
@@ -390,10 +397,10 @@ const Navbar = () => {
                             <MenuItem
                                 onMouseEnter={() => setSubmenuOpen(true)}
                                 onMouseLeave={() => setSubmenuOpen(false)}
-                                sx={getItemStyles(isActiveRoute('/ourProducts'))}
+                                sx={getItemStyles(isActiveRoute(['/ourProducts', '/ourPrdFruits', '/ourPrdGrains', '/ourPrdSpices']))}
                             >
                                 <Typography className='lines' component={'img'} src={line} sx={{ display: 'none', mr: 1 }}></Typography>
-                                <Typography className='navItem' >Our Products</Typography>
+                                <Typography className='navItem'>Our Products</Typography>
                                 {submenuOpen && (
                                     <Box sx={{ position: 'absolute', p: 2, top: '100%', left: '-10%', zIndex: 111, backgroundColor: '#fff', boxShadow: 2 }}>
                                         <MenuItem onClick={() => closeSubmenuAndNavigate('/ourProducts')} sx={getSubmenuItemStyles(isActiveRoute('/ourProducts'))}>
