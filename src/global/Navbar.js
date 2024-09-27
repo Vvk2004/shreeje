@@ -395,7 +395,7 @@ const Navbar = () => {
                                 <Typography className='lines' component={'img'} src={line} sx={{ display: 'none', mr: 1 }}></Typography>
                                 <Typography className='navItem' >Our Products</Typography>
                                 {submenuOpen && (
-                                    <Box sx={{ position: 'absolute', p: 2, top: '100%', left: '-20%', zIndex: 111, backgroundColor: '#fff', boxShadow: 2 }}>
+                                    <Box sx={{ position: 'absolute', p: 2, top: '100%', left: '-10%', zIndex: 111, backgroundColor: '#fff', boxShadow: 2 }}>
                                         <MenuItem onClick={() => closeSubmenuAndNavigate('/ourProducts')} sx={getSubmenuItemStyles(isActiveRoute('/ourProducts'))}>
                                             <Typography component={'img'} src={line} sx={{ mr: 1 }}></Typography>
                                             Our Products
