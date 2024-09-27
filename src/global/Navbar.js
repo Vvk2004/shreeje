@@ -15,6 +15,7 @@ import ContactMailIcon from '@mui/icons-material/ContactMail';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Logo from '../assets/images/global/Logo.png';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+import line from '../assets/images/global/navLines.png';
 
 const countries = [
     { code: 'AF', name: 'Afghanistan', flag: 'https://flagcdn.com/af.svg' },
@@ -268,7 +269,7 @@ const Navbar = () => {
     const [submenuOpen, setSubmenuOpen] = useState(false);
     const [sidebarSubmenuOpen, setSidebarSubmenuOpen] = useState(false);
     const navigate = useNavigate();
-    const location = useLocation(); 
+    const location = useLocation();
 
     const handleChange = (event) => {
         setSelectedValue(event.target.value);
@@ -376,12 +377,14 @@ const Navbar = () => {
                                 onClick={() => navigate('/')}
                                 sx={getItemStyles(isActiveRoute('/'))}
                             >
+                                <Typography className='lines' component={'img'} src={line} sx={{ display: 'none', mr: 1 }}></Typography>
                                 <Typography>Home</Typography>
                             </MenuItem>
                             <MenuItem
                                 onClick={() => navigate('/about')}
                                 sx={getItemStyles(isActiveRoute('/about'))}
                             >
+                                <Typography className='lines' component={'img'} src={line} sx={{ display: 'none', mr: 1 }}></Typography>
                                 <Typography>About</Typography>
                             </MenuItem>
                             <MenuItem
@@ -389,23 +392,24 @@ const Navbar = () => {
                                 onMouseLeave={() => setSubmenuOpen(false)}
                                 sx={getItemStyles(isActiveRoute('/ourProducts'))}
                             >
+                                <Typography className='lines' component={'img'} src={line} sx={{ display: 'none', mr: 1 }}></Typography>
                                 <Typography>Our Products</Typography>
                                 {submenuOpen && (
                                     <Box sx={{ position: 'absolute', p: 2, top: '100%', left: '-20%', zIndex: 111, backgroundColor: '#fff', boxShadow: 2 }}>
                                         <MenuItem onClick={() => closeSubmenuAndNavigate('/ourProducts')} sx={getSubmenuItemStyles(isActiveRoute('/ourProducts'))}>
-                                            <ArrowRightIcon />
+                                            <Typography component={'img'} src={line} sx={{ mr: 1 }}></Typography>
                                             Our Products
                                         </MenuItem>
                                         <MenuItem onClick={() => closeSubmenuAndNavigate('/ourPrdFruits')} sx={getSubmenuItemStyles(isActiveRoute('/ourPrdFruits'))}>
-                                            <ArrowRightIcon />
+                                            <Typography component={'img'} src={line} sx={{ mr: 1 }}></Typography>
                                             Our Products Fruits
                                         </MenuItem>
                                         <MenuItem onClick={() => closeSubmenuAndNavigate('/ourPrdGrains')} sx={getSubmenuItemStyles(isActiveRoute('/ourPrdGrains'))}>
-                                            <ArrowRightIcon />
+                                            <Typography component={'img'} src={line} sx={{ mr: 1 }}></Typography>
                                             Our Products Grains
                                         </MenuItem>
                                         <MenuItem onClick={() => closeSubmenuAndNavigate('/ourPrdSpices')} sx={getSubmenuItemStyles(isActiveRoute('/ourPrdSpices'))}>
-                                            <ArrowRightIcon />
+                                            <Typography component={'img'} src={line} sx={{ mr: 1 }}></Typography>
                                             Our Products Spices
                                         </MenuItem>
                                     </Box>
@@ -415,6 +419,7 @@ const Navbar = () => {
                                 onClick={() => navigate('/contact')}
                                 sx={getItemStyles(isActiveRoute('/contact'))}
                             >
+                                <Typography className='lines' component={'img'} src={line} sx={{ display: 'none', mr: 1 }}></Typography>
                                 <Typography>Contact Us</Typography>
                             </MenuItem>
                         </Box>
@@ -499,12 +504,21 @@ const getItemStyles = (isActive) => ({
     '&:hover': {
         color: '#19AED7',
         fontWeight: 600,
+        transition: '0.5s',
+    },
+    '&:hover .lines': {
+        display: 'block',
+        transition: '0.5s',
     },
     ...(isActive && {
         color: '#19AED7',
         fontWeight: 600,
-    })
+        '.lines': {
+            display: 'block',
+        },
+    }),
 });
+
 
 const getSubmenuItemStyles = (isActive) => ({
     p: 1,
