@@ -11,9 +11,7 @@ import worker from "../../assets/images/blog/worker.png";
 
 
 const blogPrd = [
-  {
-    image: container, label: "Choose the Perfect Product to Export in 6 simple steps"
-  },
+  { image: container, label: "Choose the Perfect Product to Export in 6 simple steps"},
   { image: ship, label: "Top New Points you must be Aware About Export Import policy In India" },
   { image: truck, label: "Steps to Find a Right Custom House Agent (CHA)" },
   { image: flight, label: "What is Part of Discharge and Place of Delivery" },
