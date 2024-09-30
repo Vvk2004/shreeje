@@ -56,7 +56,6 @@ const App = () => {
         <Route path="/productionBlogs" element={<ProductionBlogs />} />
         <Route path="/gallery" element={<Gallery />} />
       </Routes>
-
       <Footer />
     </>
   );
